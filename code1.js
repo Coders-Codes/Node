@@ -1,19 +1,18 @@
 
- //Arrow Function
-const mulitply = (a,b) => a*b;
-console.log(mulitply(75,15)); 
+// Ternary Operator Case :
+const fruits = ['apple', 'oranges' , ' ', 'mango', ' ' , 'lemon'];
+console.log(array);
+console.log(fruits.map(fruit => fruit.trim() ==='' ? 'empty string': fruit));
 
-//Object Creation
-const student = {
-    name:'Khushi',
-    age:23,
-    greet () {
-        console.log('Hi, I am ' + this.name)
-    }
-    // greet :function() {
-    //     console.log('Hi, I am ' + this.name)
-    // }
-};
-console.log(student);
-student.greet();
+// Normal If conditon Case :
+
+const newArray = fruits.map(fruit => {
+  if (fruit === ' ') {
+    return 'empty string';
+  }
+  return fruit;
+});
+
+console.log(newArray);
+
 
