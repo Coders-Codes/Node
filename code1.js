@@ -1,18 +1,28 @@
-
-// Ternary Operator Case :
-const fruits = ['apple', 'oranges' , ' ', 'mango', ' ' , 'lemon'];
-console.log(array);
-console.log(fruits.map(fruit => fruit.trim() ==='' ? 'empty string': fruit));
-
-// Normal If conditon Case :
-
-const newArray = fruits.map(fruit => {
-  if (fruit === ' ') {
-    return 'empty string';
-  }
-  return fruit;
-});
-
-console.log(newArray);
-
+async function values (){
+  try{
+    console.log("a");
+    console.log("b");
+    
+    const c = await new Promise((res, rej) => {
+        setTimeout(() => {
+          console.log("c");
+          res();
+        }, 3000);
+      });
+    
+    
+    const d = await new Promise((res, rej)=>{
+        setTimeout(() => {
+          console.log("d");
+          res();
+        },0)
+      });
+    
+    
+    console.log("e");
+  }catch (err) {
+    console.log(err);
+    }
+}
+values();
 
