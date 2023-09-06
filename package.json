@@ -4,10 +4,12 @@
   "description": "Node JS Sharpener Course",
   "main": "code1.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start":" node code1.js",
-    "start-server": "node code1.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Khushi Choudhary",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "changes": "^0.0.0",
+    "express": "^4.18.2"
+  }
 }
