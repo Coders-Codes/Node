@@ -44,7 +44,7 @@ main {
     color: #6200ff;
 }
 
-.product-form{
+.contact-form{
     width:20rem;
     max-width:90%;
     margin:auto;
@@ -64,7 +64,6 @@ main {
     border: 1px solid orange;
     font:inherit;
     border-radius : 2px;
-    padding: 1;
 }
 
 button{

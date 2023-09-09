@@ -12,7 +12,7 @@ main{
 .main-header {
     width: 100%;
     height: 3.5rem;
-    background-color: rgb(175, 127, 37);
+    background-color: orange;
 }
 
 .main-header__nav {

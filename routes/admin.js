@@ -14,7 +14,7 @@ res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html')); // using
 
 //Route that handles the request to product 
 router.post('/add-product',(req, res, next) => {
-    console.log('Title:', req.body.title);// getting the body of incoming requests, logging incoming data coming from the response or extracting what user has sent
+    console.log('Title:', req.body.title); // getting the body of incoming requests, logging incoming data coming from the response or extracting what user has sent
    res.redirect('/'); // using for redirecting it as function by express
     // next();
 });
