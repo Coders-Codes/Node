@@ -1,0 +1,13 @@
+node_modules
+package-lock.json
+package.json
+route.js
+details.txt
+index.js
+
+
+/*ls: to check all the files available in the current directory.
+cd: change directory ;
+cd .. : to change the directory from one step backward
+pwd : to know the name of the current directory
+whoami : to know the name of the user*/
