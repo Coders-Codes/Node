@@ -1,22 +1,18 @@
-const path = require ('path'); // exporting the path module
+const path = require ('path'); 
 const express =  require ('express');
 
-// const rootDir = require('../util/path')
+const productsController = require ('../controllers/products') // importing controller 
+
+
 
 const router = express.Router();// creating router and executing it as a function
 
-//using router to register routes
-router.get('/add-product', (req, res, next) => {
-res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html')); // using the path module to define the html code for the current js file
-//dirname - global variable that holds the absolute path of our operating system, views-folder name, ../ -  go upward to one level or backward, add-product.html - filename which contains the main code
-//res.sendfile - send back a file to the user and sendFile is a HeaderFile
-});
+//using router to register routes /admin/add-product => GET and connecting it with the controller
+router.get('/add-product',productsController.getAddProduct); 
+//passing an refrence to this function
 
 //Route that handles the request to product 
-router.post('/add-product',(req, res, next) => {
-    console.log('Title:', req.body.title); // getting the body of incoming requests, logging incoming data coming from the response or extracting what user has sent
-   res.redirect('/'); // using for redirecting it as function by express
-    // next();
-});
+router.post('/add-product',productsController.postAddProduct);
+ 
 
 module.exports = router;

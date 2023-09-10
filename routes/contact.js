@@ -3,14 +3,10 @@ const express =  require ('express');
 
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
-    res.sendFile(path.join(__dirname, '../', 'views', 'contact.html')); 
-});
+const usersController = require ('../controllers/users') // importing controller 
 
-router.post('/', (req, res, next) => {
-    console.log('Name:', req.body.name); 
-    console.log('Email:', req.body.email);
-   res.redirect('/success');
-});
 
- module.exports = router;
+router.get('/', usersController.getcontactController)
+router.post('/', usersController.postsuccessController)
+
+module.exports = router;

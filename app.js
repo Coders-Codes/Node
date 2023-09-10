@@ -5,9 +5,11 @@ const bodyParser = require("body-parser");
 const routeadmin = require("./routes/admin");
 const routeshop = require("./routes/shop");
 const routecontact = require("./routes/contact");
-const routesuccess = require("./routes/success");
+const routesuccess = require("./routes/success")
 
+const errorController = require ('./controllers/error')
 const app = express();
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "public")));
@@ -19,10 +21,9 @@ app.use("/", routeshop);
 app.use("/contactus", routecontact);
 app.use("/success", routesuccess);
 
-// adding 404 error page using 404 status method
-app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, "views", "404.html"));
-});
+//404 page
+app.use(errorController.get404); // Using Controller
 
 app.listen(3000);
+
 
