@@ -1,15 +1,18 @@
-const path = require("path");
-const express = require("express");
+const path = require('path');
 
-const productsController = require("../controllers/products"); // importing controller
+const express = require('express');
 
-const router = express.Router(); // creating router and executing it as a function
+const adminController = require('../controllers/admin');
 
-router.get("/add-product", productsController.getAddProduct); // connecting it with controller
-//passing an refrence to this function it means that we are telling express, the express router that it should take this function
-//and store it and whenever a request reaches this route, it should go ahead and execute it.
+const router = express.Router();
 
-// Route that handles the request to product and connecting it with the controller
-router.post("/add-product", productsController.postAddProduct);
+// /admin/add-product => GET
+router.get('/add-product', adminController.getAddProduct);
+
+// /admin/products => GET
+router.get('/products', adminController.getProducts);
+
+// /admin/add-product => POST
+router.post('/add-product', adminController.postAddProduct);
 
 module.exports = router;
