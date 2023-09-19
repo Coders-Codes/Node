@@ -1,13 +1,8 @@
-/*connect our databse to inside our appilcation. There are two ways to connect mysql database
-1. Creating new connection everytime we perform a new querry
-2. to create a so-called connection pool*/
+const Sequelize = require("sequelize");
 
-const mysql = require("mysql"); // importing mysql package
-const pool = mysql.createPool({
-  host: localhost,
-  user: "root",
-  database: "node-complete",
-  password: "SQL@123sql",
+const sequelize = new Sequelize("node-complete", "root", "SQL@123sql", {
+  dialect: "mysql",
+  host: "localhost",
 });
 
-module.exports = pool.promise();
+module.exports = sequelize;
