@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Blog Post</title>
+  </head>
+  <body>
+    <h1>Create a New Blog Post</h1>
+    <br />
+    <form onsubmit="saveToDatabase(event)" method="post">
+      <label for="title">Blog Title:</label><br />
+      <input type="text" id="title" name="title" /><br /><br />
+
+      <label for="author">Blog Author:</label><br />
+      <input type="text" id="author" name="author" /><br /><br />
+
+      <label for="content">Blog Content:</label><br />
+      <textarea
+        name="Explain"
+        id="content"
+        name="content"
+        cols="30"
+        rows="10"
+      ></textarea
+      ><br />
+
+      <input type="submit" value="submit" id="submit" />
+    </form>
+
+    <ul id="listofblogs"></ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="/js/frontend.js"></script>
+  </body>
+</html>
