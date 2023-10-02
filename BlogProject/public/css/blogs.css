@@ -1,0 +1,18 @@
+.BlogsContainer{
+    background-color: #ffd421;
+    padding: 5px 10px;
+}
+li{
+    list-style-type: none;
+    background-color: black;
+    color: white;
+    height: 25px;
+    padding: 0 10px;
+    margin-top: 5px;
+}
+p{
+    background-color: black;
+    color: white;
+    margin-top: 5px;
+    padding: 5px 10px;
+}
